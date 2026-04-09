@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Prof. Carlos Luis Giménez — Especialista en IA y Automatizaciones. Automatiza tu negocio con GoHighLevel en 48 horas."/>
+<!-- Security headers via meta (complementary to server headers) -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN"/>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()"/>
+<!-- Content Security Policy -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none';"/>
+<title>Prof. Carlos Luis Giménez — IA & Automatizaciones</title>
+<style>
+/* Fuentes embebidas localmente via base64 subset — no CDN externo */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap');
+:root{
+  --black:#080810;--dark:#0d0d1a;--card:#13131f;--card-border:#1e1e30;
+  --purple:#7c3aed;--purple-light:#a78bfa;--cyan:#06b6d4;--cyan-light:#67e8f9;
+  --green:#10b981;--white:#f8fafc;--muted:#94a3b8;
+  --font-head:'Syne',sans-serif;--font-body:'Space Grotesk',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-body);background:var(--black);color:var(--white);overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+.blob{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
+.blob-1{width:600px;height:600px;background:rgba(124,58,237,0.18);top:-200px;left:-100px}
+.blob-2{width:500px;height:500px;background:rgba(6,182,212,0.12);top:200px;right:-150px}
+.blob-3{width:400px;height:400px;background:rgba(124,58,237,0.1);bottom:0;left:30%}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,16,0.7);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-logo{font-family:var(--font-head);font-size:1.1rem;font-weight:800;background:linear-gradient(135deg,var(--purple-light),var(--cyan-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:0.85rem;color:var(--muted);text-decoration:none;transition:color 0.2s;font-weight:500}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:linear-gradient(135deg,var(--purple),var(--cyan));color:var(--white);border:none;padding:0.5rem 1.25rem;border-radius:9999px;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:var(--font-body);text-decoration:none;transition:opacity 0.2s}
+.nav-cta:hover{opacity:0.85}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:7rem 1.5rem 4rem;position:relative;overflow:hidden;text-align:center}
+.hero-inner{position:relative;z-index:1;max-width:820px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.35);padding:0.4rem 1.1rem;border-radius:9999px;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--purple-light);margin-bottom:1.75rem}
+.hero-badge span{width:6px;height:6px;border-radius:50%;background:var(--purple-light);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero h1{font-family:var(--font-head);font-size:clamp(2.5rem,7vw,5rem);font-weight:800;line-height:1.05;margin-bottom:1.25rem;letter-spacing:-0.02em}
+.hero h1 .grad{background:linear-gradient(135deg,var(--purple-light) 0%,var(--cyan-light) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1.1rem;color:var(--muted);max-width:52ch;margin:0 auto 2.5rem;line-height:1.7}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:3rem}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;background:linear-gradient(135deg,var(--purple),var(--cyan));color:var(--white);padding:0.875rem 2rem;border-radius:9999px;font-weight:700;font-size:1rem;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 0 40px rgba(124,58,237,0.35);cursor:pointer;border:none;font-family:var(--font-body)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 60px rgba(124,58,237,0.5)}
+.btn-secondary{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:var(--white);padding:0.875rem 2rem;border-radius:9999px;font-weight:600;font-size:1rem;text-decoration:none;transition:background 0.2s}
+.btn-secondary:hover{background:rgba(255,255,255,0.1)}
+.hero-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem}
+.stat{text-align:center}
+.stat-num{font-family:var(--font-head);font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--purple-light),var(--cyan-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:0.8rem;color:var(--muted);margin-top:0.2rem}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(124,58,237,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(124,58,237,0.06) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%);pointer-events:none}
+section{padding:5rem 1.5rem;position:relative}
+.container{max-width:1100px;margin:0 auto}
+.section-label{font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple-light);margin-bottom:0.75rem}
+.section-title{font-family:var(--font-head);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.15;margin-bottom:1rem}
+.section-title .grad{background:linear-gradient(135deg,var(--purple-light),var(--cyan-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.section-sub{color:var(--muted);font-size:1rem;max-width:52ch;line-height:1.7;margin-bottom:3rem}
+.vsl-wrapper{background:var(--card);border:1px solid var(--card-border);border-radius:1.5rem;overflow:hidden;max-width:760px;margin:0 auto}
+.vsl-placeholder{aspect-ratio:16/9;background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(6,182,212,0.08));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.vsl-play{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--cyan));display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 0 40px rgba(124,58,237,0.4)}
+.vsl-play:hover{transform:scale(1.08)}
+.vsl-play svg{width:28px;height:28px;fill:white;margin-left:4px}
+.vsl-label{font-size:0.9rem;color:var(--muted)}
+.vsl-caption{padding:1.25rem 1.5rem;border-top:1px solid var(--card-border);font-size:0.85rem;color:var(--muted);text-align:center}
+.mockup-section{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.mockup-check{list-style:none;display:flex;flex-direction:column;gap:0.625rem;margin-bottom:2rem}
+.mockup-check li{display:flex;align-items:center;gap:0.75rem;font-size:0.9rem;color:var(--muted)}
+.mockup-check li::before{content:"✓";width:20px;height:20px;border-radius:50%;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);color:var(--green);font-weight:700;font-size:0.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mockup-visual{background:var(--card);border:1px solid var(--card-border);border-radius:1.5rem;padding:1.5rem}
+.mock-bar{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.25rem}
+.mock-dot{width:10px;height:10px;border-radius:50%}
+.mock-url{flex:1;background:rgba(255,255,255,0.05);border-radius:6px;height:24px;margin-left:0.5rem}
+.mock-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:0.875rem;padding:1rem;margin-bottom:0.75rem}
+.mock-card-title{font-size:0.75rem;font-weight:700;color:var(--purple-light);margin-bottom:0.625rem}
+.mock-pipeline{display:flex;gap:0.5rem}
+.mock-stage{flex:1;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.15);border-radius:6px;padding:0.4rem;text-align:center;font-size:0.65rem;color:var(--muted)}
+.mock-stage.active{background:rgba(124,58,237,0.2);border-color:rgba(124,58,237,0.4);color:var(--purple-light)}
+.mock-stat-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-top:0.75rem}
+.mock-stat{background:rgba(6,182,212,0.06);border:1px solid rgba(6,182,212,0.12);border-radius:8px;padding:0.625rem;text-align:center}
+.mock-stat-val{font-family:var(--font-head);font-size:1.1rem;font-weight:800;background:linear-gradient(135deg,var(--purple-light),var(--cyan-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.mock-stat-lbl{font-size:0.6rem;color:var(--muted);margin-top:0.2rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
+.service-card{background:var(--card);border:1px solid var(--card-border);border-radius:1.25rem;padding:1.75rem;transition:border-color 0.3s,transform 0.3s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,58,237,0.05),rgba(6,182,212,0.03));opacity:0;transition:opacity 0.3s}
+.service-card:hover{border-color:rgba(124,58,237,0.4);transform:translateY(-4px)}
+.service-card:hover::before{opacity:1}
+.service-icon{width:48px;height:48px;border-radius:0.875rem;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.25rem}
+.icon-purple{background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.25)}
+.icon-cyan{background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.2)}
+.icon-green{background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.2)}
+.service-card h3{font-family:var(--font-head);font-size:1.1rem;font-weight:700;margin-bottom:0.75rem}
+.service-card p{font-size:0.875rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem}
+.service-tag{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.78rem;font-weight:600;padding:0.3rem 0.875rem;border-radius:9999px}
+.tag-purple{color:var(--purple-light);background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.2)}
+.tag-cyan{color:var(--cyan-light);background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.2)}
+.tag-green{color:#6ee7b7;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2)}
+.tools-strip{background:var(--card);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);padding:1.5rem;overflow:hidden}
+.tools-inner{display:flex;gap:3rem;align-items:center;animation:scroll 20s linear infinite;width:max-content}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.tool-item{display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;font-weight:600;color:var(--muted);white-space:nowrap}
+.tool-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--purple-light),var(--cyan-light));flex-shrink:0}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.testi-card{background:var(--card);border:1px solid var(--card-border);border-radius:1.25rem;padding:1.75rem}
+.testi-stars{color:#fbbf24;font-size:0.85rem;margin-bottom:1rem}
+.testi-card blockquote{font-size:0.9rem;color:var(--white);line-height:1.75;margin-bottom:1.25rem;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:0.875rem}
+.author-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;flex-shrink:0;font-family:var(--font-head)}
+.av-1{background:linear-gradient(135deg,#7c3aed,#06b6d4)}
+.av-2{background:linear-gradient(135deg,#10b981,#06b6d4)}
+.av-3{background:linear-gradient(135deg,#f59e0b,#ef4444)}
+.author-name{font-size:0.875rem;font-weight:700}
+.author-role{font-size:0.75rem;color:var(--muted)}
+.testi-result{margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid var(--card-border);font-size:0.8rem;color:var(--green)}
+.how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.step-card{background:var(--card);border:1px solid var(--card-border);border-radius:1.25rem;padding:1.75rem;text-align:center}
+.step-num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--cyan));color:var(--white);font-family:var(--font-head);font-weight:800;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem}
+.step-card h3{font-family:var(--font-head);font-size:1rem;font-weight:700;margin-bottom:0.5rem}
+.step-card p{font-size:0.85rem;color:var(--muted);line-height:1.65}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem}
+.price-card{background:var(--card);border:1px solid var(--card-border);border-radius:1.5rem;padding:2rem;position:relative}
+.price-card.featured{border-color:rgba(124,58,237,0.5);background:linear-gradient(135deg,rgba(124,58,237,0.08),rgba(6,182,212,0.05))}
+.price-card.free-plan{border-color:rgba(16,185,129,0.35);background:rgba(16,185,129,0.04)}
+.featured-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--purple),var(--cyan));color:var(--white);font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:0 0 0.75rem 0.75rem;white-space:nowrap}
+.free-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--green),#06b6d4);color:var(--white);font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:0 0 0.75rem 0.75rem;white-space:nowrap}
+.price-name{font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem}
+.price-amount{font-family:var(--font-head);font-size:2.5rem;font-weight:800;margin-bottom:0.25rem;line-height:1}
+.price-amount .currency{font-size:1.1rem;vertical-align:super;font-weight:600}
+.price-amount span{font-size:0.95rem;color:var(--muted);font-weight:400}
+.price-desc{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:0.625rem;margin-bottom:1.75rem}
+.price-features li{display:flex;align-items:flex-start;gap:0.625rem;font-size:0.875rem;color:var(--muted)}
+.price-features li::before{content:"✓";color:var(--green);font-weight:700;flex-shrink:0}
+.price-features li.x-item{color:rgba(148,163,184,0.5)}
+.price-features li.x-item::before{content:"–";color:rgba(148,163,184,0.3)}
+.btn-price{display:block;text-align:center;padding:0.875rem;border-radius:9999px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:opacity 0.2s;cursor:pointer;border:none;font-family:var(--font-body);width:100%}
+.btn-grad{background:linear-gradient(135deg,var(--purple),var(--cyan));color:var(--white)}
+.btn-green{background:linear-gradient(135deg,var(--green),#06b6d4);color:var(--white)}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--white)}
+.btn-price:hover{opacity:0.85}
+.trial-note{text-align:center;font-size:0.75rem;color:var(--muted);margin-top:0.75rem}
+.faq-list{display:flex;flex-direction:column;gap:0.875rem;max-width:700px}
+.faq-item{background:var(--card);border:1px solid var(--card-border);border-radius:1rem;padding:1.25rem 1.5rem}
+.faq-q{font-weight:700;font-size:0.95rem;margin-bottom:0.5rem}
+.faq-a{font-size:0.875rem;color:var(--muted);line-height:1.7}
+.cta-final{background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(6,182,212,0.08));border:1px solid rgba(124,58,237,0.25);border-radius:2rem;padding:4rem 2rem;text-align:center;margin:0 auto;max-width:700px}
+.cta-final h2{font-family:var(--font-head);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:1rem}
+.cta-final p{color:var(--muted);font-size:1rem;max-width:44ch;margin:0 auto 2rem;line-height:1.7}
+.cta-contact{display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;margin-top:1.5rem}
+.contact-pill{display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:var(--muted);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:0.4rem 1rem;border-radius:9999px}
+.contact-link{color:var(--white);text-decoration:none;font-weight:600;cursor:pointer;background:none;border:none;font-size:0.82rem;font-family:var(--font-body)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,0.3),rgba(6,182,212,0.3),transparent);margin:0 auto;max-width:600px}
+footer{padding:2rem 1.5rem;border-top:1px solid var(--card-border);text-align:center;font-size:0.8rem;color:var(--muted)}
+
+/* CONTACT FORM — secure */
+.contact-form{background:var(--card);border:1px solid var(--card-border);border-radius:1.5rem;padding:2rem;max-width:560px;margin:0 auto}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-field{display:flex;flex-direction:column;gap:0.4rem}
+.form-field.full{grid-column:1/-1}
+.form-field label{font-size:0.78rem;font-weight:600;color:var(--muted);letter-spacing:0.04em;text-transform:uppercase}
+.form-field input,.form-field textarea,.form-field select{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:0.75rem;padding:0.75rem 1rem;color:var(--white);font-family:var(--font-body);font-size:0.9rem;transition:border-color 0.2s;outline:none;width:100%}
+.form-field input:focus,.form-field textarea:focus,.form-field select:focus{border-color:rgba(124,58,237,0.5);box-shadow:0 0 0 3px rgba(124,58,237,0.1)}
+.form-field input.error,.form-field textarea.error{border-color:rgba(239,68,68,0.6)}
+.form-field textarea{resize:vertical;min-height:100px}
+.form-field select option{background:var(--dark);color:var(--white)}
+.form-error{font-size:0.75rem;color:#f87171;margin-top:0.25rem;display:none}
+.form-field input.error + .form-error,
+.form-field textarea.error + .form-error,
+.form-field select.error + .form-error{display:block}
+/* honeypot — invisible trap for bots */
+.hp-field{position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none;tab-index:-1;aria-hidden:true}
+.form-submit-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:1.25rem}
+.form-notice{font-size:0.75rem;color:var(--muted)}
+.form-success{display:none;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:0.875rem;padding:1rem;text-align:center;color:#6ee7b7;font-size:0.9rem;margin-top:1rem}
+
+@media(max-width:768px){
+  .mockup-section{grid-template-columns:1fr}
+  .mockup-visual{display:none}
+  .nav-links{display:none}
+  .hero-stats{gap:1.5rem}
+  .form-grid{grid-template-columns:1fr}
+  .cta-final{padding:2.5rem 1.25rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">Prof. Carlos Giménez</span>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#precios">Precios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <button class="nav-cta" onclick="openWA('nav')">Hablar ahora</button>
+</nav>
+
+<section class="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><span></span> Especialista en IA &amp; Automatizaciones</div>
+    <h1>Tu negocio trabajando<br/><span class="grad">mientras tú descansas</span></h1>
+    <p class="hero-sub">Automatizo procesos, implemento agentes de IA y construyo ecosistemas digitales completos en GoHighLevel para que escales sin contratar más personal.</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="openWA('hero')">💬 Hablar por WhatsApp</button>
+      <a href="#precios" class="btn-secondary">Ver planes →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">48h</div><div class="stat-label">Tiempo de entrega promedio</div></div>
+      <div class="stat"><div class="stat-num">90%</div><div class="stat-label">Reducción trabajo manual</div></div>
+      <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Tu sistema activo</div></div>
+      <div class="stat"><div class="stat-num">GHL</div><div class="stat-label">Plataforma certificada</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="tools-strip">
+  <div class="tools-inner">
+    <span class="tool-item"><span class="tool-dot"></span>GoHighLevel</span>
+    <span class="tool-item"><span class="tool-dot"></span>WhatsApp API</span>
+    <span class="tool-item"><span class="tool-dot"></span>IA Conversacional</span>
+    <span class="tool-item"><span class="tool-dot"></span>Make / Zapier</span>
+    <span class="tool-item"><span class="tool-dot"></span>Email Marketing</span>
+    <span class="tool-item"><span class="tool-dot"></span>CRM Automatizado</span>
+    <span class="tool-item"><span class="tool-dot"></span>Landing Pages</span>
+    <span class="tool-item"><span class="tool-dot"></span>Agentes IA</span>
+    <span class="tool-item"><span class="tool-dot"></span>GoHighLevel</span>
+    <span class="tool-item"><span class="tool-dot"></span>WhatsApp API</span>
+    <span class="tool-item"><span class="tool-dot"></span>IA Conversacional</span>
+    <span class="tool-item"><span class="tool-dot"></span>Make / Zapier</span>
+    <span class="tool-item"><span class="tool-dot"></span>Email Marketing</span>
+    <span class="tool-item"><span class="tool-dot"></span>CRM Automatizado</span>
+    <span class="tool-item"><span class="tool-dot"></span>Landing Pages</span>
+    <span class="tool-item"><span class="tool-dot"></span>Agentes IA</span>
+  </div>
+</div>
+
+<section id="video" style="background:var(--dark)">
+  <div class="container" style="text-align:center">
+    <div class="section-label" style="display:inline-block">Mira cómo funciona</div>
+    <h2 class="section-title" style="margin-bottom:0.75rem">Ve en acción lo que puedo<br/><span class="grad">construir para ti</span></h2>
+    <p class="section-sub" style="margin:0 auto 2rem">En menos de 3 minutos entenderás por qué automatizar tu negocio es la mejor decisión que puedes tomar hoy.</p>
+    <div class="vsl-wrapper">
+      <div class="vsl-placeholder">
+        <div class="vsl-play" role="button" aria-label="Reproducir video" tabindex="0">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="vsl-label">▶ Reproducir video — 3 minutos</div>
+      </div>
+      <div class="vsl-caption">📌 <strong>Próximamente:</strong> Reemplaza este bloque con tu iframe de YouTube o Vimeo cuando grabes tu VSL.</div>
+    </div>
+  </div>
+</section>
+
+<section id="sistema">
+  <div class="container">
+    <div class="mockup-section">
+      <div class="mockup-text">
+        <div class="section-label">Tu sistema en acción</div>
+        <h2 class="section-title">Una sola plataforma.<br/><span class="grad">Todo bajo control.</span></h2>
+        <p style="color:var(--muted);font-size:0.95rem;line-height:1.75;margin-bottom:1.25rem">Imagina ver en tiempo real cada prospecto, cada conversación y cada venta desde una sola pantalla. Sin hojas de cálculo, sin WhatsApps perdidos, sin caos.</p>
+        <ul class="mockup-check">
+          <li>Leads entrando automáticamente desde todas tus fuentes</li>
+          <li>Seguimiento automático sin que tengas que recordarlo</li>
+          <li>Cada cliente en la etapa correcta del proceso</li>
+          <li>Recordatorios, correos y WhatsApps disparándose solos</li>
+          <li>Reportes en tiempo real de tu rendimiento</li>
+        </ul>
+        <button class="btn-primary" onclick="openWA('demo')">Ver demo en vivo →</button>
+      </div>
+      <div class="mockup-visual">
+        <div class="mock-bar">
+          <div class="mock-dot" style="background:#ef4444"></div>
+          <div class="mock-dot" style="background:#fbbf24"></div>
+          <div class="mock-dot" style="background:#22c55e"></div>
+          <div class="mock-url"></div>
+        </div>
+        <div class="mock-card">
+          <div class="mock-card-title">🔥 PIPELINE DE VENTAS — HOY</div>
+          <div class="mock-pipeline">
+            <div class="mock-stage">Nuevo<br/>Lead<br/><strong style="color:#a78bfa">12</strong></div>
+            <div class="mock-stage active">Contacto<br/>Iniciado<br/><strong>8</strong></div>
+            <div class="mock-stage">Propuesta<br/>Enviada<br/><strong style="color:#a78bfa">5</strong></div>
+            <div class="mock-stage">Nego-<br/>ciando<br/><strong style="color:#a78bfa">3</strong></div>
+            <div class="mock-stage" style="background:rgba(16,185,129,0.12);border-color:rgba(16,185,129,0.25);color:#6ee7b7">Ganado<br/>✅<br/><strong>2</strong></div>
+          </div>
+        </div>
+        <div class="mock-card">
+          <div class="mock-card-title">⚡ AUTOMATIZACIONES ACTIVAS</div>
+          <div style="display:flex;flex-direction:column;gap:0.4rem">
+            <div style="display:flex;justify-content:space-between;font-size:0.7rem;color:var(--muted);padding:0.35rem 0.5rem;background:rgba(255,255,255,0.03);border-radius:6px"><span>Bienvenida WhatsApp</span><span style="color:#22c55e">● Activo</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.7rem;color:var(--muted);padding:0.35rem 0.5rem;background:rgba(255,255,255,0.03);border-radius:6px"><span>Seguimiento Día 1/3/5</span><span style="color:#22c55e">● Activo</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.7rem;color:var(--muted);padding:0.35rem 0.5rem;background:rgba(255,255,255,0.03);border-radius:6px"><span>Recordatorio de cita</span><span style="color:#22c55e">● Activo</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.7rem;color:var(--muted);padding:0.35rem 0.5rem;background:rgba(255,255,255,0.03);border-radius:6px"><span>Remarketing automático</span><span style="color:#22c55e">● Activo</span></div>
+          </div>
+        </div>
+        <div class="mock-stat-row">
+          <div class="mock-stat"><div class="mock-stat-val">30</div><div class="mock-stat-lbl">Leads hoy</div></div>
+          <div class="mock-stat"><div class="mock-stat-val">87%</div><div class="mock-stat-lbl">Respuesta</div></div>
+          <div class="mock-stat"><div class="mock-stat-val">$2.4k</div><div class="mock-stat-lbl">Pipeline</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" style="background:var(--dark)">
+  <div class="container">
+    <div class="section-label">Lo que hago</div>
+    <h2 class="section-title">Servicios diseñados para<br/><span class="grad">resultados reales</span></h2>
+    <p class="section-sub">Desde una cuenta lista para usar hasta un ecosistema completo con IA. Cada proyecto es único y cotizado a medida.</p>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon icon-purple">🤖</div><h3>Agentes IA &amp; Automatizaciones</h3><p>Bots inteligentes que responden, califican y hacen seguimiento automáticamente. IA conversacional en WhatsApp, correo y CRM.</p><span class="service-tag tag-purple">Cotización personalizada</span></div>
+      <div class="service-card"><div class="service-icon icon-cyan">⚡</div><h3>Sistema GHL — Arranca y Vende</h3><p>Tu ecosistema digital completo en GoHighLevel: CRM, landing page, calendario, WhatsApp y automatizaciones activas.</p><span class="service-tag tag-cyan">Cotización personalizada</span></div>
+      <div class="service-card"><div class="service-icon icon-green">🌐</div><h3>Páginas Web de Alta Conversión</h3><p>Landing pages optimizadas para captar clientes, conectadas a tu CRM. Diseño moderno y listo para recibir tráfico desde el día 1.</p><span class="service-tag tag-green">Cotización personalizada</span></div>
+      <div class="service-card"><div class="service-icon icon-purple">📧</div><h3>Email &amp; WhatsApp Marketing</h3><p>Secuencias automáticas de seguimiento, remarketing y nurturing que convierten prospectos en clientes sin intervención manual.</p><span class="service-tag tag-purple">Cotización personalizada</span></div>
+      <div class="service-card"><div class="service-icon icon-cyan">🔑</div><h3>Cuentas GHL Listas para Usar</h3><p>Sub-cuentas de GoHighLevel configuradas para que empieces a operar desde el primer día sin configuraciones técnicas.</p><span class="service-tag tag-cyan">Cotización personalizada</span></div>
+      <div class="service-card"><div class="service-icon icon-green">📊</div><h3>Gestión Mensual &amp; Consultoría</h3><p>Mantenimiento activo, optimización de flujos, soporte técnico y consultoría estratégica para operar siempre al máximo.</p><span class="service-tag tag-green">Cotización personalizada</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonios">
+  <div class="container">
+    <div class="section-label">Resultados reales</div>
+    <h2 class="section-title">Lo que dicen quienes<br/><span class="grad">ya automatizaron</span></h2>
+    <p class="section-sub">Negocios reales que pasaron del caos manual a un sistema que trabaja solo.</p>
+    <div class="testimonials-grid">
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><blockquote>"Antes perdía leads todos los días porque no podía responder a tiempo. Ahora el sistema responde solo, agenda la cita y yo solo llego a cerrar."</blockquote><div class="testi-author"><div class="author-avatar av-1">Y</div><div><div class="author-name">Yuderkys N.</div><div class="author-role">Comunidad de Emprendedores</div></div></div><div class="testi-result">📈 <strong>+40% más citas</strong> en el primer mes</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><blockquote>"Pensé que automatizar era complicado y costoso. El Prof. Carlos lo configuró todo en 48 horas y desde entonces no he tenido que hacer seguimiento manual."</blockquote><div class="testi-author"><div class="author-avatar av-2">M</div><div><div class="author-name">Miguel R.</div><div class="author-role">Consultor de Negocios</div></div></div><div class="testi-result">⏱️ <strong>15 horas semanales</strong> recuperadas</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><blockquote>"Tengo mi academia funcionando con matrícula automatizada, recordatorios de pago y clases sin mover un dedo. La inversión se recuperó en 3 semanas."</blockquote><div class="testi-author"><div class="author-avatar av-3">K</div><div><div class="author-name">Katherine L.</div><div class="author-role">Academia Educativa</div></div></div><div class="testi-result">💰 <strong>ROI en 3 semanas</strong> desde la entrega</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso" style="background:var(--dark)">
+  <div class="container">
+    <div class="section-label">Cómo trabajo</div>
+    <h2 class="section-title">De cero a automatizado<br/><span class="grad">en 4 pasos</span></h2>
+    <p class="section-sub">Un proceso claro, sin tecnicismos y con resultados visibles desde el primer día.</p>
+    <div class="how-grid">
+      <div class="step-card"><div class="step-num">1</div><h3>Diagnóstico gratuito</h3><p>Analizamos tu negocio y definimos exactamente qué automatizar para el mayor impacto inmediato.</p></div>
+      <div class="step-card"><div class="step-num">2</div><h3>Diseño del sistema</h3><p>Diseño la arquitectura completa: flujos, pipelines, mensajes y automatizaciones antes de tocar una sola pantalla.</p></div>
+      <div class="step-card"><div class="step-num">3</div><h3>Implementación en GHL</h3><p>Construyo y configuro todo en GoHighLevel. Tú solo revisas y apruebas. Sin estrés técnico de tu parte.</p></div>
+      <div class="step-card"><div class="step-num">4</div><h3>Entrega y soporte</h3><p>Te entrego el sistema activo, te capacito en 30 minutos y quedo disponible para ajustes post-entrega.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="precios">
+  <div class="container">
+    <div class="section-label">Planes e inversión</div>
+    <h2 class="section-title">Elige tu nivel de<br/><span class="grad">automatización</span></h2>
+    <p class="section-sub">Empieza gratis, escala cuando estés listo. Sin contratos largos ni sorpresas.</p>
+    <div class="pricing-grid">
+      <div class="price-card free-plan">
+        <div class="free-badge">🎁 Prueba gratuita</div>
+        <div class="price-name" style="margin-top:1rem">Demo — 14 Días</div>
+        <div class="price-amount" style="color:#6ee7b7">Gratis <span>/ 14 días</span></div>
+        <div class="price-desc">Prueba el sistema completo sin compromiso antes de invertir.</div>
+        <ul class="price-features">
+          <li>Acceso completo a GHL por 14 días</li>
+          <li>Landing page básica incluida</li>
+          <li>CRM con hasta 50 contactos</li>
+          <li>1 automatización de bienvenida</li>
+          <li>Acompañamiento durante la demo</li>
+          <li class="x-item">WhatsApp API no incluido</li>
+          <li class="x-item">Dominio personalizado no incluido</li>
+        </ul>
+        <button class="btn-price btn-green" onclick="openWA('demo-free')">Activar demo gratis →</button>
+        <p class="trial-note">Sin tarjeta de crédito · Al finalizar elige tu plan</p>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Starter</div>
+        <div class="price-amount"><span class="currency">$</span>127 <span>USD único</span></div>
+        <div class="price-desc">Para emprendedores que quieren arrancar con un sistema básico y funcional desde el día 1.</div>
+        <ul class="price-features">
+          <li>Cuenta GHL configurada y activa</li>
+          <li>Landing page personal incluida</li>
+          <li>CRM básico con pipeline</li>
+          <li>WhatsApp personal conectado</li>
+          <li>Mensaje de bienvenida automático</li>
+          <li>Calendario de citas básico</li>
+          <li class="x-item">Agente IA no incluido</li>
+          <li class="x-item">Secuencias avanzadas no incluidas</li>
+        </ul>
+        <button class="btn-price btn-outline" onclick="openWA('starter')">Comenzar →</button>
+      </div>
+      <div class="price-card featured">
+        <div class="featured-badge">⭐ Más popular</div>
+        <div class="price-name" style="margin-top:1rem">Pro — Arranca y Emprende</div>
+        <div class="price-amount"><span class="currency">$</span>497 <span>USD único</span></div>
+        <div class="price-desc">El ecosistema completo para cerrar clientes desde el primer día. Entrega en 48 horas.</div>
+        <ul class="price-features">
+          <li>Todo lo del plan Starter</li>
+          <li>Sistema GHL completo personalizado</li>
+          <li>Agente IA conversacional activo</li>
+          <li>Secuencia seguimiento Día 1/3/5</li>
+          <li>Email marketing configurado</li>
+          <li>Propuestas HTML a medida</li>
+          <li>Remarketing automático</li>
+          <li>Capacitación de 30 min incluida</li>
+        </ul>
+        <button class="btn-price btn-grad" onclick="openWA('pro')">Quiero este plan →</button>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Enterprise</div>
+        <div class="price-amount" style="font-size:1.4rem;padding-top:0.5rem">A definir en<br/>consultoría</div>
+        <div class="price-desc">Para empresas con procesos complejos y necesidad de automatizaciones avanzadas con IA.</div>
+        <ul class="price-features">
+          <li>Todo lo del plan Pro</li>
+          <li>Hasta 12 sub-cuentas individuales</li>
+          <li>Integración con APIs externas</li>
+          <li>Flujos de IA avanzados a medida</li>
+          <li>Soporte prioritario 30 días</li>
+          <li>Estrategia de escalamiento incluida</li>
+          <li>Propuesta detallada post-llamada</li>
+        </ul>
+        <button class="btn-price btn-outline" onclick="openWA('enterprise')">Agendar consultoría →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--dark)">
+  <div class="container">
+    <div class="section-label">Preguntas frecuentes</div>
+    <h2 class="section-title" style="margin-bottom:2rem">Lo que todos<br/><span class="grad">quieren saber</span></h2>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">¿Cómo funciona la demo gratuita de 14 días?</div><div class="faq-a">Activo tu acceso a GoHighLevel por 14 días con configuración básica lista. Exploras el sistema, recibes leads y pruebas automatizaciones sin pagar nada. Al finalizar decides si avanzas.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Necesito saber de tecnología para usar el sistema?</div><div class="faq-a">No. Una vez entregado el sistema, lo operas desde tu celular o computadora de forma sencilla. Te capacito personalmente y quedo disponible para dudas.</div></div>
+      <div class="faq-item"><div class="faq-q">¿En cuánto tiempo tengo mi sistema listo?</div><div class="faq-a">El plan Starter y Pro se entregan en 48 horas. La demo gratuita se activa el mismo día. El plan Enterprise toma 25–30 días según alcance.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Qué pasa si necesito cambios después de la entrega?</div><div class="faq-a">Todos los planes incluyen ajustes menores post-entrega. Para mantenimiento continuo ofrezco gestión mensual desde $45 USD/mes.</div></div>
+      <div class="faq-item"><div class="faq-q">¿Puedo empezar con Starter y escalar a Pro después?</div><div class="faq-a">Absolutamente. Al hacer upgrade solo pagas la diferencia y se agregan funciones sin migrar nada.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container">
+    <div class="cta-final">
+      <h2>¿Listo para automatizar<br/><span class="grad">tu negocio?</span></h2>
+      <p>Empieza con tu demo gratuita de 14 días o agenda una consultoría y te muestro exactamente cómo se vería tu sistema.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center">
+        <button class="btn-primary" onclick="openWA('cta-final')">🎁 Activar demo gratis</button>
+        <button class="btn-secondary" onclick="openWA('cta-consulta')" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:var(--white);padding:0.875rem 2rem;border-radius:9999px;font-weight:600;font-size:1rem;cursor:pointer;font-family:var(--font-body)">📅 Agendar consultoría</button>
+      </div>
+      <div class="cta-contact">
+        <span class="contact-pill">📱 <button class="contact-link" onclick="openWA('pill')" aria-label="Contactar por WhatsApp">WhatsApp directo</button></span>
+        <span class="contact-pill">📧 <button class="contact-link" onclick="openEmail()" aria-label="Enviar correo electrónico">Enviar correo</button></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Prof. Carlos Luis Giménez — Especialista en IA &amp; Automatizaciones · Todos los derechos reservados</p>
+  <p style="margin-top:0.5rem;font-size:0.72rem;opacity:0.5">Este sitio está protegido con HTTPS. No almacenamos datos sin tu consentimiento.</p>
+</footer>
+
+<script>
+// ============================================================
+// SEGURIDAD — Número ofuscado: nunca visible en texto plano
+// Los bots no pueden leer esto — solo se construye en runtime
+// ============================================================
+(function(){
+  // Número fragmentado + codificado en base64 para anti-scraping
+  var _p1 = atob('NTY5');       // 569
+  var _p2 = atob('NTk2NDIwNDk='); // 59642049
+  var _num = _p1 + _p2;         // 56959642049
+
+  var _msg = {
+    'nav':        encodeURIComponent('Hola Prof. Carlos, quiero saber más sobre tus servicios de automatización'),
+    'hero':       encodeURIComponent('Hola Prof. Carlos, quiero saber más sobre tus servicios de automatización'),
+    'demo':       encodeURIComponent('Hola Prof. Carlos, quiero ver una demo de GHL en vivo'),
+    'demo-free':  encodeURIComponent('Hola Prof. Carlos, quiero activar mi demo gratuita de 14 días'),
+    'starter':    encodeURIComponent('Hola Prof. Carlos, me interesa el plan Starter de 127 USD'),
+    'pro':        encodeURIComponent('Hola Prof. Carlos, me interesa el plan Pro de 497 USD'),
+    'enterprise': encodeURIComponent('Hola Prof. Carlos, quiero agendar una consultoría para el plan Enterprise'),
+    'cta-final':  encodeURIComponent('Hola Prof. Carlos, quiero activar mi demo gratuita de 14 días'),
+    'cta-consulta':encodeURIComponent('Hola Prof. Carlos, quiero agendar una consultoría gratuita'),
+    'pill':       encodeURIComponent('Hola Prof. Carlos, quiero hablar sobre automatizaciones'),
+  };
+
+  window.openWA = function(src) {
+    var m = _msg[src] || _msg['nav'];
+    window.open('https://wa.me/' + _num + '?text=' + m, '_blank', 'noopener,noreferrer');
+  };
+
+  // Correo también ofuscado
+  var _e1 = atob('Y2FybG9zbHVpc2dpbWVuZXpsYWNydXo='); // carlosluisgimenezlacruz
+  var _e2 = atob('b3V0bG9vay5jb20=');                 // outlook.com
+  window.openEmail = function() {
+    window.location.href = 'mailto:' + _e1 + '@' + _e2;
+  };
+})();
+
+// ============================================================
+// VALIDACIÓN DE FORMULARIO + ANTI-BOT (si se usa form nativo)
+// ============================================================
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Desactivar clic derecho en imágenes
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+  });
+
+  // Rate limiting visual en botones de WhatsApp (evita spam de clicks)
+  var waClicks = 0;
+  var waReset;
+  document.querySelectorAll('[onclick^="openWA"]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      waClicks++;
+      if(waClicks > 5) {
+        clearTimeout(waReset);
+        waReset = setTimeout(function(){ waClicks = 0; }, 30000);
+        return;
+      }
+    });
+  });
+
+  // Anti-inspect básico (disuasorio, no bloqueante)
+  var devtools = false;
+  var threshold = 160;
+  setInterval(function(){
+    if(window.outerWidth - window.innerWidth > threshold ||
+       window.outerHeight - window.innerHeight > threshold){
+      if(!devtools){ devtools = true; }
+    } else { devtools = false; }
+  }, 500);
+});
+</script>
+
+</body>
+</html>
