@@ -10,7 +10,7 @@
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
 <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()"/>
 <!-- Content Security Policy -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none';"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'none'; frame-src https://www.youtube.com; object-src 'none';"/>
 <title>Prof. Carlos Luis Giménez — IA & Automatizaciones</title>
 <style>
 /* Fuentes embebidas localmente via base64 subset — no CDN externo */
@@ -249,14 +249,30 @@ footer{padding:2rem 1.5rem;border-top:1px solid var(--card-border);text-align:ce
     <h2 class="section-title" style="margin-bottom:0.75rem">Ve en acción lo que puedo<br/><span class="grad">construir para ti</span></h2>
     <p class="section-sub" style="margin:0 auto 2rem">En menos de 3 minutos entenderás por qué automatizar tu negocio es la mejor decisión que puedes tomar hoy.</p>
     <div class="vsl-wrapper">
-      <div class="vsl-placeholder">
-        <div class="vsl-play" role="button" aria-label="Reproducir video" tabindex="0">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <div class="vsl-label">▶ Reproducir video — 3 minutos</div>
+      <!-- ============================================================
+           OPCIÓN A — VIDEO DIRECTO (activo ahora)
+           Reemplaza "Go_High_Level.mp4" con la URL de GHL Media Library
+           o con la URL de YouTube embed cuando lo subas
+      ============================================================ -->
+      <div class="vsl-video-container" style="position:relative;aspect-ratio:9/16;max-width:380px;margin:0 auto;background:#000;border-radius:1.5rem 1.5rem 0 0;overflow:hidden;">
+        <iframe
+          src="https://www.youtube.com/embed/c23bREpRjAg?rel=0&modestbranding=1&playsinline=1"
+          title="GoHighLevel para tu negocio — Prof. Carlos Giménez"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+          aria-label="Video: GoHighLevel para tu negocio - Prof. Carlos Giménez">
+        </iframe>
       </div>
-      <div class="vsl-caption">📌 <strong>Próximamente:</strong> Reemplaza este bloque con tu iframe de YouTube o Vimeo cuando grabes tu VSL.</div>
+      <div class="vsl-caption">
+        🎬 <strong>Prof. Carlos Giménez</strong> — Especialista en IA &amp; Automatizaciones ·
+        <button onclick="openWA('hero')" style="background:none;border:none;color:#a78bfa;font-weight:700;cursor:pointer;font-size:0.85rem;font-family:inherit;">Escríbeme al WhatsApp →</button>
+      </div>
     </div>
+
+
   </div>
 </section>
 
