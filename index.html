@@ -618,23 +618,21 @@ footer{padding:2rem 1.5rem;border-top:1px solid var(--card-border);text-align:ce
             return;
           }
 
-          fetch(WEBHOOK, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({nombre: nombre, telefono: telefono, correo: correo, servicio: servicio, fuente: 'Landing Page'})
-          })
-          .then(function(){ 
+          // GET con query params: 100% CORS-free, Make.com lo acepta sin problema
+          var query = '?nombre='   + encodeURIComponent(nombre)
+                    + '&telefono=' + encodeURIComponent(telefono)
+                    + '&correo='   + encodeURIComponent(correo)
+                    + '&servicio=' + encodeURIComponent(servicio)
+                    + '&fuente=Landing%20Page';
+
+          var img = new Image();
+          img.src = WEBHOOK + query;
+          img.onload = img.onerror = function(){
             document.getElementById('form-success').style.display = 'block';
             document.getElementById('landing-form').reset();
-          })
-          .catch(function(){
-            var msg = encodeURIComponent('Hola Prof. Carlos, mi nombre es ' + nombre + ', teléfono: ' + telefono + ', correo: ' + correo + ', necesito: ' + servicio);
-            window.open('https://wa.me/56959642049?text=' + msg, '_blank', 'noopener,noreferrer');
-          })
-          .finally(function(){
             btn.disabled = false;
-            btn.textContent = '🚀 Quiero mi Cuenta GoHighLevel';
-          });
+            btn.textContent = '\uD83D\uDE80 Quiero mi Cuenta GoHighLevel';
+          };
         });
       })();
       </script>
