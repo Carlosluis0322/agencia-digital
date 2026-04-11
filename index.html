@@ -10,7 +10,7 @@
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
 <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()"/>
 <!-- Content Security Policy -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'none'; frame-src 'none'; object-src 'none';"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'none'; frame-src https://www.youtube.com; object-src 'none';"/>
 <title>Prof. Carlos Luis Giménez — IA & Automatizaciones</title>
 <style>
 /* Fuentes embebidas localmente via base64 subset — no CDN externo */
@@ -254,29 +254,8 @@ footer{padding:2rem 1.5rem;border-top:1px solid var(--card-border);text-align:ce
            Reemplaza "Go_High_Level.mp4" con la URL de GHL Media Library
            o con la URL de YouTube embed cuando lo subas
       ============================================================ -->
-      <div class="vsl-video-container" style="position:relative;max-width:380px;margin:0 auto;background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(6,182,212,0.08));border-radius:1.5rem 1.5rem 0 0;overflow:hidden;aspect-ratio:9/16;display:flex;align-items:center;justify-content:center;">
-        <a href="https://youtube.com/shorts/c23bREpRjAg" target="_blank" rel="noopener noreferrer"
-           style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;text-decoration:none;width:100%;height:100%;padding:2rem;"
-           aria-label="Ver video en YouTube">
-          <!-- Thumbnail background -->
-          <img
-            src="https://img.youtube.com/vi/c23bREpRjAg/maxresdefault.jpg"
-            alt="GoHighLevel para tu negocio — Prof. Carlos Giménez"
-            onerror="this.src='https://img.youtube.com/vi/c23bREpRjAg/hqdefault.jpg'"
-            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.5;"
-            loading="lazy"
-          />
-          <!-- Play button overlay -->
-          <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:1.25rem;">
-            <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#06b6d4);display:flex;align-items:center;justify-content:center;box-shadow:0 0 50px rgba(124,58,237,0.7);transition:transform 0.2s;">
-              <svg viewBox="0 0 24 24" style="width:32px;height:32px;fill:white;margin-left:5px;" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <div style="text-align:center;">
-              <div style="color:white;font-weight:700;font-size:1rem;font-family:'Space Grotesk',sans-serif;margin-bottom:0.4rem;">▶ Ver video completo</div>
-              <div style="color:rgba(255,255,255,0.6);font-size:0.78rem;font-family:'Space Grotesk',sans-serif;">Se abre en YouTube · ~1 minuto</div>
-            </div>
-          </div>
-        </a>
+      <div class="vsl-video-container" style="position:relative;aspect-ratio:16/9;background:#000;border-radius:1.5rem 1.5rem 0 0;overflow:hidden;width:100%;">
+        <iframe src="https://www.youtube.com/embed/H0kvqN5qvQg?rel=0&modestbranding=1&playsinline=1" title="GoHighLevel para tu negocio — Prof. Carlos Giménez" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" loading="lazy"></iframe>
       </div>
       <div class="vsl-caption">
         🎬 <strong>Prof. Carlos Giménez</strong> — Especialista en IA &amp; Automatizaciones ·
@@ -479,6 +458,10 @@ footer{padding:2rem 1.5rem;border-top:1px solid var(--card-border);text-align:ce
     <div class="cta-final">
       <h2>¿Listo para automatizar<br/><span class="grad">tu negocio?</span></h2>
       <p>Empieza con tu demo gratuita de 14 días o agenda una consultoría y te muestro exactamente cómo se vería tu sistema.</p>
+      <!-- Video 2: Los 3 errores -->
+      <div style="position:relative;aspect-ratio:16/9;background:#000;border-radius:1rem;overflow:hidden;margin:1.5rem auto 2rem;max-width:640px;width:100%;">
+        <iframe src="https://www.youtube.com/embed/z2gnT7aNDfk?rel=0&modestbranding=1&playsinline=1" title="Los 3 errores que te hacen perder clientes — Prof. Carlos Giménez" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" loading="lazy"></iframe>
+      </div>
       <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center">
         <button class="btn-primary" onclick="openWA('cta-final')">🎁 Activar demo gratis</button>
         <button class="btn-secondary" onclick="openWA('cta-consulta')" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:var(--white);padding:0.875rem 2rem;border-radius:9999px;font-weight:600;font-size:1rem;cursor:pointer;font-family:var(--font-body)">📅 Agendar consultoría</button>
