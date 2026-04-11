@@ -581,7 +581,7 @@ footer{padding:2rem 1.5rem;border-top:1px solid var(--card-border);text-align:ce
 
       <script>
       (function(){
-        var WEBHOOK = 'PEGAR_URL_WEBHOOK_GHL_AQUI';
+        var WEBHOOK = 'https://hook.us2.make.com/u1b9m1jgpn3u14gq6qk7goqc83s169k4';
         document.getElementById('landing-form').addEventListener('submit', function(e){
           e.preventDefault();
           var nombre   = document.getElementById('f-nombre').value.trim();
@@ -607,7 +607,7 @@ footer{padding:2rem 1.5rem;border-top:1px solid var(--card-border);text-align:ce
           btn.disabled = true;
           btn.textContent = 'Enviando...';
 
-          if(WEBHOOK === 'PEGAR_URL_WEBHOOK_GHL_AQUI'){
+          if(WEBHOOK === 'https://hook.us2.make.com/u1b9m1jgpn3u14gq6qk7goqc83s169k4'){
             // Fallback: abrir WhatsApp con los datos
             var msg = encodeURIComponent('Hola Prof. Carlos, mi nombre es ' + nombre + ', teléfono: ' + telefono + ', correo: ' + correo + ', necesito: ' + servicio);
             window.open('https://wa.me/56959642049?text=' + msg, '_blank', 'noopener,noreferrer');
